@@ -9,7 +9,7 @@
 
 ### EQWorks Android MobileSDK
 
-EQWorks Android MobileSDK allows app developers to log events from client applications to EQ servers. The SDK and the examples provided in this document are developed in Kotlin.
+EQWorks Android MobileSDK allows app developers to log events from client applications to EQ servers. The SDK and the examples provided in this document are developed in Kotlin. The Gradle plugin used in the SDK runs on Java 11.
 
 ### Installation
 
