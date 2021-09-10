@@ -26,6 +26,20 @@ allprojects {
     }
 }
 ```
+Note: if you are using Android Studio to generate a new project, please check if your settings.gradle file contains the below code block.
+If yes, please comment out the code block and add allprojects{} as shown above.
+
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}	
+```
+
 Application-level build.gradle file
 ```
 dependencies {
