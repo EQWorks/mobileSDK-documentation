@@ -27,7 +27,7 @@ allprojects {
 }
 ```
 Note: if you are using Android Studio to generate a new project, please check if your settings.gradle file contains the below code block.
-If yes, please comment out the code block and add allprojects{} as shown above.
+If yes, please comment out the code block and add allprojects{} in Project level build.gradle as shown above.
 
 ```
 dependencyResolutionManagement {
