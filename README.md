@@ -3,4 +3,4 @@ This repository contains the integration documents for EQWorks Android and iOS m
 
 ### Android mobileSDK
 	*[SDK Integration guide for v1.0.7](docs/androidsdk_v1.0.7.md) 
-	**Read the [Kotlin Serialization Guide](docs/serialization-guide.md) for all details.**
+	**Read the [Kotlin Serialization Guide](docs/androidsdk_v1.0.7.md) for all details.**
