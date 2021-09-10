@@ -25,8 +25,7 @@ repositories {
 Application-level build.gradle file
 ```
 dependencies {
-	implementation 'com.github.eqworks(........to be updated))'
-}
+	implementation 'com.github.EQWorks:mobilesdk:1.0.7'
 ```
 ### Permission
 
