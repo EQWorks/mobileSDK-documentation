@@ -18,8 +18,12 @@ We will use JitPack to distribute the Android MobileSDK. To install the library 
 Project-level build.gradle file
 
 ```
-repositories {
-	maven { url 'https://jitpack.io' }
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 Application-level build.gradle file
