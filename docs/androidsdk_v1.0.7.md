@@ -30,6 +30,7 @@ Application-level build.gradle file
 ```
 dependencies {
 	implementation 'com.github.EQWorks:mobilesdk:1.0.7'
+	}
 ```
 ### Permission
 
