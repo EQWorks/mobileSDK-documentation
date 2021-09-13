@@ -369,4 +369,157 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
 1. For 400 to 499 series error in response, please ensure you are providing the JWT access token correctly. If the error exists, please contact EQWorks for assistance.
 2. 413 status code is returned when uploaded data is too large. For a single record upload, the max payload size is 1000KB. For batch payload upload, the size of a single payload cannot exceed 1000KB, and the total size of a batch payload cannot exceed 4MB. 
 
+### Payload Format
 
+**logUser**
+```Kotlin
+{
+  "context": {
+    "app": {
+      "name": "mobilesdk",
+      "version": "1.0",
+      "namespace": "com.eqworks.mobilesdk",
+      "build": "1"
+    },
+    "locale": "en-US",
+    "ip": "192.168.232.2",
+    "device": {
+      "manufacturer": "Google",
+      "model": "Android SDK built for x86",
+      "name": "generic_x86",
+      "type": "android",
+      "ad_tracking_enabled": "undefined",
+      "advertising_id": "undefined"
+    },
+    "os": {
+      "name": "Android",
+      "version": "8.0.0"
+    },
+    "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
+    "timezone": "America/Winnipeg"
+  },
+  "cmd": "logUser",
+  "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
+  "app_user_id": "abc45678",
+  "type": "Identify",
+  "location": {
+    "latitude": null,
+    "longitude": null
+  },
+  "timestamp": "2021-08-30T14:47:28.943Z",
+  "attributes": {
+    "business": "financial",
+    "clientId": "CL0098786756454"
+  }
+}
+```
+**logEvent**
+```Kotlin
+{
+  "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
+  "app_user_id": "abc45678",
+  "context": {
+    "app": {
+      "name": "mobilesdk",
+      "version": "1.0",
+      "namespace": "com.eqworks.mobilesdk",
+      "build": "1"
+    },
+    "locale": "en-US",
+    "ip": "192.168.232.2",
+    "device": {
+      "manufacturer": "Google",
+      "model": "Android SDK built for x86",
+      "name": "generic_x86",
+      "type": "android",
+      "ad_tracking_enabled": "undefined",
+      "advertising_id": "undefined"
+    },
+    "os": {
+      "name": "Android",
+      "version": "8.0.0"
+    },
+    "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
+    "timezone": "America/Winnipeg"
+  },
+  "type": "Track",
+  "location": {
+    "latitude": null,
+    "longitude": null
+  },
+  "timestamp": "2021-08-30T14:47:28.946Z",
+  "event": "add_to_cart",
+  "properties": {
+    "title": "Toaster",
+    "sku": "PRD45677654",
+    "price": 25.3,
+    "modelNo": "ABCD"
+  },
+  "cmd": "logEvent"
+}
+```
+**batch upload**
+```Kotlin
+{
+  "batch_info": [
+    {
+      "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
+      "app_user_id": "abc45678",
+      "type": "Identify",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "timestamp": "2021-08-30T14:49:43.695Z",
+      "attributes": {
+        "business": "financial",
+        "clientId": "CL0098786756454"
+      },
+      "cmd": "logUser"
+    },
+    {
+      "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
+      "app_user_id": "abc45678",
+      "type": "Track",
+      "location": {
+        "latitude": null,
+        "longitude": null
+      },
+      "timestamp": "2021-08-30T14:49:43.703Z",
+      "event": "add_to_cart",
+      "properties": {
+        "title": "Sweater",
+        "sku": "PRD45677654",
+        "price": 25.3,
+        "modelNo": "ABCD"
+      },
+      "cmd": "logEvent"
+    }
+  ],
+  "context": {
+    "app": {
+      "name": "mobilesdk",
+      "version": "1.0",
+      "namespace": "com.eqworks.mobilesdk",
+      "build": "1"
+    },
+    "locale": "en-US",
+    "ip": "192.168.232.2",
+    "device": {
+      "manufacturer": "Google",
+      "model": "Android SDK built for x86",
+      "name": "generic_x86",
+      "type": "android",
+      "ad_tracking_enabled": "undefined",
+      "advertising_id": "undefined"
+    },
+    "os": {
+      "name": "Android",
+      "version": "8.0.0"
+    },
+    "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
+    "timezone": "America/Winnipeg"
+  },
+  "cmd": "batch"
+}
+```
