@@ -19,12 +19,14 @@ We will use JitPack to distribute the Android MobileSDK. To install the library 
 Project-level build.gradle file
 
 ```Kotlin
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
+allprojects 
+{
+  repositories 
+  {
+     google()
+     mavenCentral()
+     maven { url 'https://jitpack.io' }
+  }
 }
 ```
 Note: if you are using Android Studio to generate a new project, please check if your settings.gradle file contains the below code block.
