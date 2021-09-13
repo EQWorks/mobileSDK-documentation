@@ -65,7 +65,7 @@ EQLibrary.Settings(applicationContext).configurationSettings.setAppDevToken(appD
 2. The MobileSDK supports data caching. Client applications can decide to upload a single data or batch data to the server. The SDK supports caching of 1 to 20 data in the SDK database. Using the ‘setQueueSize’ method, you can set any number between 1 to 20 as cache size. Default is 20.
 ```Kotlin
 EQLibrary.Settings(applicationContext).configurationSettings.setQueueSize(queueSize)
-```Kotlin
+```
 3. The SDK uses a background WorkManager that runs every six hours to check if anything has been stored in the queue and not uploaded to the server.
 
 ### Client Methods
