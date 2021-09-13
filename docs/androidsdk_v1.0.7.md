@@ -6,6 +6,7 @@
 	- [logUser](#loguser)
 	- [logEvent](#logevent)
 * [TroubleShooting](#troubleshooting)
+* [Payload format](#payload-format)
 
 ### EQWorks Android MobileSDK
 
