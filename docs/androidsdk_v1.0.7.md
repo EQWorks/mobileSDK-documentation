@@ -387,6 +387,8 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
 **logUser**
 ```Kotlin
 {
+  "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
+  "app_user_id": "abc45678_testing_dev",
   "context": {
     "app": {
       "name": "mobilesdk",
@@ -400,9 +402,7 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
       "manufacturer": "Google",
       "model": "Android SDK built for x86",
       "name": "generic_x86",
-      "type": "android",
-      "ad_tracking_enabled": "undefined",
-      "advertising_id": "undefined"
+      "type": "android"
     },
     "os": {
       "name": "Android",
@@ -411,26 +411,30 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
     "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
     "timezone": "America/Winnipeg"
   },
-  "cmd": "logUser",
-  "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
-  "app_user_id": "abc45678",
   "type": "Identify",
   "location": {
-    "latitude": null,
-    "longitude": null
+    "latitude": -34.89765544,
+    "longitude": 56.789665
   },
-  "timestamp": "2021-08-30T14:47:28.943Z",
+  "timestamp": "2021-09-14T22:24:50.359Z",
+  "cmd": "logUser",
+  "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
+  "limit_ad_tracking_enabled": false,
   "attributes": {
-    "business": "financial",
-    "clientId": "CL0098786756454"
+    "name": "Sam",
+    "age": 25,
+    "email": "",
+    "company": null,
+    "interest": "sports",
+    "occupation": "student"
   }
 }
 ```
 **logEvent**
 ```Kotlin
 {
-  "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
-  "app_user_id": "abc45678",
+  "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
+  "app_user_id": "abc45678_testing_dev",
   "context": {
     "app": {
       "name": "mobilesdk",
@@ -444,9 +448,7 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
       "manufacturer": "Google",
       "model": "Android SDK built for x86",
       "name": "generic_x86",
-      "type": "android",
-      "ad_tracking_enabled": "undefined",
-      "advertising_id": "undefined"
+      "type": "android"
     },
     "os": {
       "name": "Android",
@@ -457,16 +459,17 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
   },
   "type": "Track",
   "location": {
-    "latitude": null,
-    "longitude": null
+    "longitude": 56.789665,
+    "latitude": -34.89765544
   },
-  "timestamp": "2021-08-30T14:47:28.946Z",
-  "event": "add_to_cart",
+  "timestamp": "2021-09-14T22:27:45.005Z",
+  "limit_ad_tracking_enabled": "undefined",
+  "advertising_id": "undefined",
+  "event": "add_to_wishlist",
   "properties": {
-    "title": "Toaster",
-    "sku": "PRD45677654",
-    "price": 25.3,
-    "modelNo": "ABCD"
+    "prod_id": "prd_101",
+    "prod_color": "white",
+    "prod_size": "S"
   },
   "cmd": "logEvent"
 }
@@ -476,35 +479,42 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
 {
   "batch_info": [
     {
-      "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
-      "app_user_id": "abc45678",
+      "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
+      "app_user_id": "abc45678_testing_dev",
       "type": "Identify",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "longitude": 56.789665,
+        "latitude": -34.89765544
       },
-      "timestamp": "2021-08-30T14:49:43.695Z",
+      "timestamp": "2021-09-14T22:29:34.887Z",
+      "limit_ad_tracking_enabled": false,
+      "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
       "attributes": {
-        "business": "financial",
-        "clientId": "CL0098786756454"
+        "name": "Sam",
+        "age": 25,
+        "email": "",
+        "company": null,
+        "interest": "sports",
+        "occupation": "student"
       },
       "cmd": "logUser"
     },
     {
-      "user_id": "81a3abb1-299e-48bf-b0b6-0f99da4b001c",
-      "app_user_id": "abc45678",
+      "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
+      "app_user_id": "abc45678_testing_dev",
       "type": "Track",
       "location": {
-        "latitude": null,
-        "longitude": null
+        "longitude": null,
+        "latitude": null
       },
-      "timestamp": "2021-08-30T14:49:43.703Z",
-      "event": "add_to_cart",
+      "timestamp": "2021-09-14T22:29:35.269Z",
+      "limit_ad_tracking_enabled": false,
+      "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
+      "event": "add_to_wishlist",
       "properties": {
-        "title": "Sweater",
-        "sku": "PRD45677654",
-        "price": 25.3,
-        "modelNo": "ABCD"
+        "prod_id": "prd_101",
+        "prod_color": "white",
+        "prod_size": "S"
       },
       "cmd": "logEvent"
     }
@@ -522,9 +532,7 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
       "manufacturer": "Google",
       "model": "Android SDK built for x86",
       "name": "generic_x86",
-      "type": "android",
-      "ad_tracking_enabled": "undefined",
-      "advertising_id": "undefined"
+      "type": "android"
     },
     "os": {
       "name": "Android",
