@@ -72,11 +72,11 @@ EQLibrary.Settings(applicationContext).configurationSettings.setQueueSize(queueS
 To enable Android Advertising ID
 
 Add below permission to AndroidManifest.xml
-```
+```Kotlin
 <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 ```
 Set enableGoogleAdvertisingId() to true
-```
+```Kotlin
 EQLibrary.Settings(applicationContext).configurationSettings.enableGoogleAdvertisingId(true)
 ```
 
