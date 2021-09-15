@@ -68,8 +68,9 @@ EQLibrary.Settings(applicationContext).configurationSettings.setQueueSize(queueS
 ```
 3. The SDK uses a background WorkManager that runs every six hours to check if anything has been stored in the queue and not uploaded to the server.
 
-4. The SDK has the option of using Android Advertising ID. If you want to use this id, please confirm that usage of the id is compliant with Google Play Developer Program Policies.By default, advertisingId is disabled in SDK.  If you enable this id, SDK will read and upload Android Advertising ID to the server. 
-To enable Android Advertising ID
+4. The SDK has the option of using the Android Advertising ID. Note that the SDK functionality does not comply with Google Play Developer Program Policies for Advertising ID. Present functionalities of the SDK can bridge Advertising Id reset. Scenarios can also arise where personally identifiable information can get connected to advertising identifiers. If you need to use the advertising id, opt for implementing prominent disclosure and consent requirements from users to comply with platform policies. For more information: https://support.google.com/googleplay/android-developer/answer/10144311?hl=en&ref_topic=9877467
+    
+By default, the Advertising ID is disabled in SDK. Once you get user consent for your app’s access, collection, use, and sharing of the data, you can enable the advertising Id in SDK.
 
 Add below permission to AndroidManifest.xml
 ```Kotlin
