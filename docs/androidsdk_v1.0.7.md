@@ -98,13 +98,11 @@ Method call example
 ```Kotlin
 val eqObj = EQLibrary.getInstance(applicationContext)
 
-CoroutineScope(Dispatchers.IO).launch{val res = eqObj.logUser("abc45678", null)}
-
 CoroutineScope(Dispatchers.IO).launch{
-		val res = eqObj.logUser("abc45678", param12, null)}
-
-CoroutineScope(Dispatchers.IO).launch{
-		val res = eqObj.logUser("abc45678", param12, EQLibrary.LocationC(34.56788976,-24.6754336)}
+	val res1 = eqObj.logUser("abc45678", null)
+	val res2 = eqObj.logUser("abc45678", param12, null)
+	val res3 = eqObj.logUser("abc45678", param12, EQLibrary.LocationC(34.56788976,-24.6754336)
+}
 ```
 <table>
 
@@ -230,14 +228,13 @@ Example
 val eqObj = EQLibrary.getInstance(applicationContext)
 
 CoroutineScope(Dispatchers.IO).launch {
-	val res = eqObj.logEvent( EQLibrary.Events.ITEM_ADD_TO_WISHLIST, 
+	val res1 = eqObj.logEvent( EQLibrary.Events.ITEM_ADD_TO_WISHLIST, 
 				  param5,
-			          EQLibrary.LocationC(56.789665, -34.89765544))}
+			          EQLibrary.LocationC(56.789665, -34.89765544))
+	val res2 = eqObj.logEvent( EQLibrary.Events.ADD_TO_CART, param5, null)
+	val res3 = eqObj.logEvent("item purchased", null)
+}
 
-CoroutineScope(Dispatchers.IO).launch {
-	val res = eqObj.logEvent( EQLibrary.Events.ADD_TO_CART, param5, null)}
-	
-EQLibrary.getInstance(applicationContext).logEvent("item purchased", null)
 ```
 
 <table>
