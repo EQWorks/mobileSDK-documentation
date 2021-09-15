@@ -76,9 +76,9 @@ Add below permission to AndroidManifest.xml
 ```Kotlin
 <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 ```
-Set enableGoogleAdvertisingId() to true
+Set setAdvertisingIdDisclosureConsent() to true
 ```Kotlin
-EQLibrary.Settings(applicationContext).configurationSettings.enableGoogleAdvertisingId(true)
+EQLibrary.Settings(applicationContext).configurationSettings.setAdvertisingIdDisclosureConsent(true)
 ```
 
 ### Client Methods
