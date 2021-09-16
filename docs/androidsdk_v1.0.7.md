@@ -390,8 +390,8 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
   "app_user_id": "abc45678_testing_dev",
   "type": "Identify",
   "timestamp": "2021-09-16T15:28:26.134Z",
-  "limit_ad_tracking_enabled": "undefined",
-  "advertising_id": "undefined",
+  "limit_ad_tracking_enabled": "",
+  "advertising_id": "",
   "location": {
     "longitude": 56.789665,
     "latitude": -34.89765544
@@ -436,8 +436,8 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
   "app_user_id": "abc45678_testing_dev",
   "type": "Track",
   "timestamp": "2021-09-16T15:28:28.146Z",
-  "limit_ad_tracking_enabled": "undefined",
-  "advertising_id": "undefined",
+  "limit_ad_tracking_enabled": "",
+  "advertising_id": "",
   "location": {
     "longitude": null,
     "latitude": null
