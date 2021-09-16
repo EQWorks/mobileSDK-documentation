@@ -385,39 +385,17 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
 **logUser**
 ```Kotlin
 {
+  "cmd": "logUser",
   "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
   "app_user_id": "abc45678_testing_dev",
-  "context": {
-    "app": {
-      "name": "mobilesdk",
-      "version": "1.0",
-      "namespace": "com.eqworks.mobilesdk",
-      "build": "1"
-    },
-    "locale": "en-US",
-    "ip": "192.168.232.2",
-    "device": {
-      "manufacturer": "Google",
-      "model": "Android SDK built for x86",
-      "name": "generic_x86",
-      "type": "android"
-    },
-    "os": {
-      "name": "Android",
-      "version": "8.0.0"
-    },
-    "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
-    "timezone": "America/Winnipeg"
-  },
   "type": "Identify",
+  "timestamp": "2021-09-16T15:28:26.134Z",
+  "limit_ad_tracking_enabled": "undefined",
+  "advertising_id": "undefined",
   "location": {
-    "latitude": -34.89765544,
-    "longitude": 56.789665
+    "longitude": 56.789665,
+    "latitude": -34.89765544
   },
-  "timestamp": "2021-09-14T22:24:50.359Z",
-  "cmd": "logUser",
-  "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
-  "limit_ad_tracking_enabled": false,
   "attributes": {
     "name": "Sam",
     "age": 25,
@@ -425,14 +403,7 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
     "company": null,
     "interest": "sports",
     "occupation": "student"
-  }
-}
-```
-**logEvent**
-```Kotlin
-{
-  "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
-  "app_user_id": "abc45678_testing_dev",
+  },
   "context": {
     "app": {
       "name": "mobilesdk",
@@ -454,39 +425,73 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
     },
     "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
     "timezone": "America/Winnipeg"
-  },
+  }
+}
+```
+**logEvent**
+```Kotlin
+{
+  "cmd": "logEvent",
+  "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
+  "app_user_id": "abc45678_testing_dev",
   "type": "Track",
-  "location": {
-    "longitude": 56.789665,
-    "latitude": -34.89765544
-  },
-  "timestamp": "2021-09-14T22:27:45.005Z",
+  "timestamp": "2021-09-16T15:28:28.146Z",
   "limit_ad_tracking_enabled": "undefined",
   "advertising_id": "undefined",
-  "event": "add_to_wishlist",
-  "properties": {
-    "prod_id": "prd_101",
-    "prod_color": "white",
-    "prod_size": "S"
+  "location": {
+    "longitude": null,
+    "latitude": null
   },
-  "cmd": "logEvent"
+  "event": "item purchased",
+  "properties": {
+    "productId": "PRD45678",
+    "productName": "Sweater",
+    "sku": "PRD45677654OTI",
+    "price": 25.3,
+    "modelNo": "",
+    "size": "M"
+  },
+  "context": {
+    "app": {
+      "name": "mobilesdk",
+      "version": "1.0",
+      "namespace": "com.eqworks.mobilesdk",
+      "build": "1"
+    },
+    "locale": "en-US",
+    "ip": "192.168.232.2",
+    "device": {
+      "manufacturer": "Google",
+      "model": "Android SDK built for x86",
+      "name": "generic_x86",
+      "type": "android"
+    },
+    "os": {
+      "name": "Android",
+      "version": "8.0.0"
+    },
+    "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
+    "timezone": "America/Winnipeg"
+  }
 }
 ```
 **batch upload**
 ```Kotlin
 {
+  "cmd": "batch",
   "batch_info": [
     {
+      "cmd": "logUser",
       "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
       "app_user_id": "abc45678_testing_dev",
       "type": "Identify",
+      "timestamp": "2021-09-16T15:37:04.321Z",
+      "limit_ad_tracking_enabled": false,
+      "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
       "location": {
         "longitude": 56.789665,
         "latitude": -34.89765544
       },
-      "timestamp": "2021-09-14T22:29:34.887Z",
-      "limit_ad_tracking_enabled": false,
-      "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
       "attributes": {
         "name": "Sam",
         "age": 25,
@@ -494,27 +499,41 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
         "company": null,
         "interest": "sports",
         "occupation": "student"
-      },
-      "cmd": "logUser"
+      }
     },
     {
+      "cmd": "logEvent",
       "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
       "app_user_id": "abc45678_testing_dev",
       "type": "Track",
+      "timestamp": "2021-09-16T15:37:04.621Z",
+      "limit_ad_tracking_enabled": false,
+      "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
       "location": {
         "longitude": null,
         "latitude": null
       },
-      "timestamp": "2021-09-14T22:29:35.269Z",
-      "limit_ad_tracking_enabled": false,
-      "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
       "event": "add_to_wishlist",
       "properties": {
         "prod_id": "prd_101",
         "prod_color": "white",
         "prod_size": "S"
+      }
+    },
+    {
+      "cmd": "logEvent",
+      "user_id": "65560900-2d39-43f3-a820-6c684668bfcd",
+      "app_user_id": "abc45678_testing_dev",
+      "type": "Track",
+      "timestamp": "2021-09-16T15:37:04.656Z",
+      "limit_ad_tracking_enabled": false,
+      "advertising_id": "bdfe52ff-1ed2-4361-a4b4-22dad6badb73",
+      "location": {
+        "longitude": null,
+        "latitude": null
       },
-      "cmd": "logEvent"
+      "event": "add_to_cart",
+      "properties": {}
     }
   ],
   "context": {
@@ -538,7 +557,6 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
     },
     "user_agent": "Dalvik/2.1.0 (Linux; U; Android 8.0.0; Android SDK built for x86 Build/OSR1.180418.026)",
     "timezone": "America/Winnipeg"
-  },
-  "cmd": "batch"
+  }
 }
 ```
