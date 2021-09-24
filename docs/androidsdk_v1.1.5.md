@@ -132,7 +132,7 @@ CoroutineScope(Dispatchers.IO).launch{
 
 </td>
 
-<td>Can be a map/ JSON object/ class/ SDK provided class/ valid json string, which holds attributes of a user. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ UserInfo class provided by SDK/ valid json string. Below are some valid input formats for "attributes". This is an optional parameter. App developers are encouraged to use "attributes" to record as much useful user information available to them.
+<td>Can be a map/ JSON object/ class/ valid json string, which holds attributes of a user. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ valid json string. Below are some valid input formats for "attributes". This is an optional parameter. App developers are encouraged to use "attributes" to record as much useful user information available to them.
 
 </td>
 
@@ -175,20 +175,6 @@ CoroutineScope(Dispatchers.IO).launch{
 
 **Example of “attributes” parameter**
 
-UserInfo class provided by SDK
-
-```Kotlin
-data class UserInfo(
-var name: String?,
-var age: Int?,
-var email: String?,
-var company: String?,
-var interest: String?,
-var occupation: String?
-)
-
-val param12 = EQLibrary.UserInfo("Sam", 25, "", null, "sports", "student")
-```
 Map
 ```Kotlin
 val param = mapOf<String,String>( "email" to "abcdxyz@gmail.com",
