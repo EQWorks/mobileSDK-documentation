@@ -177,10 +177,8 @@ CoroutineScope(Dispatchers.IO).launch{
 
 Map
 ```Kotlin
-val param = mapOf<String,String>( "email" to "abcdxyz@gmail.com",
-			          "customer" to "Walmart",
-                                  "age" to "28",
-                                  "area" to "Ottawa, Canada")
+val param = mapOf<String,String> ( "customer" to "Walmart",
+                                   "area" to "Ottawa, Canada")
 ```
 
 Valid Json String
