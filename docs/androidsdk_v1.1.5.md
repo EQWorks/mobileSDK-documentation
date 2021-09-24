@@ -200,10 +200,9 @@ val param = buildJsonObject { put("business", "financial")
 Any class declared on client-side application(serializable with kotlinx.serialization)
 ```Kotlin
 @Serializable
-data class UserAttributes(var age: Int, var company: String, 
-var referred by: String)
+data class UserAttributes(var company: String, var referred by: String)
 
-val param = UserAttributes(23, "ABC company", "xyz store")
+val param = UserAttributes("ABC company", "xyz store")
 ```
 
 #### logEvent
