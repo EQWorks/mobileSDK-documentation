@@ -397,10 +397,6 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
     "latitude": -34.89765544
   },
   "attributes": {
-    "name": "Sam",
-    "age": 25,
-    "email": "",
-    "company": null,
     "interest": "sports",
     "occupation": "student"
   },
@@ -493,10 +489,6 @@ val param6 = Item("toaster", 225.56F, "TOAST67856435677")
         "latitude": -34.89765544
       },
       "attributes": {
-        "name": "Sam",
-        "age": 25,
-        "email": "",
-        "company": null,
         "interest": "sports",
         "occupation": "student"
       }
