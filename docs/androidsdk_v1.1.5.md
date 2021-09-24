@@ -132,7 +132,7 @@ CoroutineScope(Dispatchers.IO).launch{
 
 </td>
 
-<td>Can be a map/ JSON object/ class/ SDK provided class, which holds attributes of a user. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ UserInfo class provided by SDK. Below are some valid input formats for "attributes". This is an optional parameter. App developers are encouraged to use "attributes" to record as much useful user information available to them.
+<td>Can be a map/ JSON object/ class/ SDK provided class/ valid json string, which holds attributes of a user. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ UserInfo class provided by SDK/ valid json string. Below are some valid input formats for "attributes". This is an optional parameter. App developers are encouraged to use "attributes" to record as much useful user information available to them.
 
 </td>
 
@@ -197,7 +197,7 @@ val param = mapOf<String,String>( "email" to "abcdxyz@gmail.com",
                                   "area" to "Ottawa, Canada")
 ```
 
-valid Json String
+Valid Json String
 ```Kotlin
 val itemObj = UserAttributes("ABC company", "ref_Co_5678")
 val gson = Gson()
@@ -309,7 +309,7 @@ ITEM_SEARCHED
 
 </td>
 
-<td>Can be a map/ JSON object/ class/ SDK provided class. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ Product class provided by SDK. Below are some valid input formats for "properties". 
+<td>Can be a map/ JSON object/ class/ SDK provided class/ valid json string. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ Product class provided by SDK/ valid json string. Below are some valid input formats for "properties". 
 
 </td>
 
