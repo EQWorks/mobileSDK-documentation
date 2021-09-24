@@ -132,7 +132,7 @@ CoroutineScope(Dispatchers.IO).launch{
 
 </td>
 
-<td>Can be a map/ JSON object/ class/ valid json string, which holds attributes of a user. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ valid json string. Below are some valid input formats for "attributes". This is an optional parameter. App developers are encouraged to use "attributes" to record as much useful user information available to them.
+<td>Can be a map/ JSON object/ class/ valid json string, which holds attributes of a user. If you are using a JSON object or class declared on a client application, then ensure that you are using <strong>kotlinx.serialization</strong> in the client application to serialize. If that is not possible due to platform constraints, use a map/ valid json string. Below are some valid input formats for "attributes". This is an optional parameter. App developers are encouraged to use "attributes" to record useful user information available to them.
 
 </td>
 
