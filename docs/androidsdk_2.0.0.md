@@ -220,8 +220,8 @@ val eqObj = EQLibrary.getInstance(applicationContext)
 
 CoroutineScope(Dispatchers.IO).launch {
 	val res1 = eqObj.logEvent( EventName.ITEM_ADD_TO_WISHLIST, 
-				                     param5,
-			                       LocationC(56.789665, -34.89765544))
+				   param5,
+		                   LocationC(56.789665, -34.89765544))
 	val res2 = eqObj.logEvent( EventName.ADD_TO_CART, param5, null)
 	val res3 = eqObj.logEvent("item purchased", null)
 }
@@ -359,7 +359,7 @@ JSON object (serializable with kotlinx.serialization)
 
 ```Kotlin
 val param1 = buildJsonObject { put("prod_id", "PRD5691234")
-			                         put("prod_name", "Samsung Tab")
+			       put("prod_name", "Samsung Tab")
                              }
 ```
 
