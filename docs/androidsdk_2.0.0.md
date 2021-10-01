@@ -60,11 +60,11 @@ Please configure the SDK to work seamlessly with EQ servers. There are two steps
 
 1. EQWorks will provide a JWT access token to client application developers for authentication. Please Set this token in the SDK by calling "setAppDevToken". It is sufficient to set the token in SDK only once. Afterwards, if you need to update the token in SDK, you can use this method
 ```Kotlin
-EQLibrary.Settings(applicationContext).configurationSettings.setAppDevToken(appDevToken)
+ConfigurationSettings(applicationContext).setAppDevToken(appDevToken)
 ```
 2. The MobileSDK supports data caching. Client applications can decide to upload a single data or batch data to the server. The SDK supports caching of 1 to 20 data in the SDK database. Using the ‘setQueueSize’ method, you can set any number between 1 to 20 as cache size. Default is 20.
 ```Kotlin
-EQLibrary.Settings(applicationContext).configurationSettings.setQueueSize(queueSize)
+ConfigurationSettings(applicationContext).setQueueSize(queueSize)
 ```
 3. The SDK uses a background WorkManager that runs every six hours to check if anything has been stored in the queue and not uploaded to the server.
 
@@ -78,7 +78,7 @@ Add below permission to AndroidManifest.xml
 ```
 Set setAdvertisingIdDisclosureConsent() to true
 ```Kotlin
-EQLibrary.Settings(applicationContext).configurationSettings.setAdvertisingIdDisclosureConsent(true)
+ConfigurationSettings(applicationContext).setAdvertisingIdDisclosureConsent(true)
 ```
 
 ### Client Methods
@@ -101,7 +101,7 @@ val eqObj = EQLibrary.getInstance(applicationContext)
 CoroutineScope(Dispatchers.IO).launch{
 	val res1 = eqObj.logUser("abc45678", null)
 	val res2 = eqObj.logUser("abc45678", param12, null)
-	val res3 = eqObj.logUser("abc45678", param12, EQLibrary.LocationC(34.56788976,-24.6754336)
+	val res3 = eqObj.logUser("abc45678", param12, LocationC(34.56788976,-24.6754336)
 }
 ```
 <table>
@@ -219,10 +219,10 @@ Example
 val eqObj = EQLibrary.getInstance(applicationContext)
 
 CoroutineScope(Dispatchers.IO).launch {
-	val res1 = eqObj.logEvent( EQLibrary.Events.ITEM_ADD_TO_WISHLIST, 
-				  param5,
-			          EQLibrary.LocationC(56.789665, -34.89765544))
-	val res2 = eqObj.logEvent( EQLibrary.Events.ADD_TO_CART, param5, null)
+	val res1 = eqObj.logEvent( EventName.ITEM_ADD_TO_WISHLIST, 
+				                     param5,
+			                       LocationC(56.789665, -34.89765544))
+	val res2 = eqObj.logEvent( EventName.ADD_TO_CART, param5, null)
 	val res3 = eqObj.logEvent("item purchased", null)
 }
 
@@ -337,8 +337,7 @@ ITEM_SEARCHED
 Product class provided in SDK
 
 ```Kotlin
-val param7 = EQLibrary.Product("PRD45678", "Laptop","PRD45677654OTI",
- 2550.30F, "", "16 inch monitor")
+val param7 = Product("PRD45678", "Laptop","PRD45677654OTI", 2550.30F, "", "16 inch monitor")
 ```
 
 Map
@@ -360,7 +359,7 @@ JSON object (serializable with kotlinx.serialization)
 
 ```Kotlin
 val param1 = buildJsonObject { put("prod_id", "PRD5691234")
-			       put("prod_name", "Samsung Tab")
+			                         put("prod_name", "Samsung Tab")
                              }
 ```
 
