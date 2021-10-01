@@ -6,17 +6,17 @@ Changes for this release are backward incompaitble
     previous format: EQLibrary.Settings(applicationContext).configurationSettings.setAppDevToken(appDevToken)
     present format: ConfigurationSettings(applicationContext).setAppDevToken(appDevToken)
     ```
-    1. LocationC class relocate
+    2. LocationC class relocate
     ``` 
     previous format: EQLibrary.LocationC(-45.767898, 23.6754433)
     present format: LocationC(-45.767898, 23.6754433)
     ```
-    1. Product class relocate
+    3. Product class relocate
     ```
     previous format: EQLibrary.Product("PRD45678", "Laptop","PRD45677654OTI", 2550.30F, "", "16 inch monitor")
     present format: Product("PRD45678", "Laptop","PRD45677654OTI", 2550.30F, "", "16 inch monitor")
     ```
-    1. Events class update
+    4. Events class update
     ```
     previous format: EQLibrary.Events.ITEM_ADD_TO_WISHLIST
     present format:  EventName.ITEM_ADD_TO_WISHLIST
