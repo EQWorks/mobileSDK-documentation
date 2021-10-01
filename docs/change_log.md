@@ -3,23 +3,23 @@ Changes for this release are backward incompaitble
  * feature - 
     1. ConfigurationSettings() class visibility access update. 
     ```
-    previous format to access configuration methods: EQLibrary.Settings(applicationContext).configurationSettings.setAppDevToken(appDevToken)
-    present format to access the  configuration methods: ConfigurationSettings(applicationContext).setAppDevToken(appDevToken)
+    previous format: EQLibrary.Settings(applicationContext).configurationSettings.setAppDevToken(appDevToken)
+    present format: ConfigurationSettings(applicationContext).setAppDevToken(appDevToken)
     ```
     1. LocationC class relocate
     ``` 
-    previous format to access LocationC: EQLibrary.LocationC(-45.767898, 23.6754433)
-    present format to access LocationC: LocationC(-45.767898, 23.6754433)
+    previous format: EQLibrary.LocationC(-45.767898, 23.6754433)
+    present format: LocationC(-45.767898, 23.6754433)
     ```
     1. Product class relocate
     ```
-    previous format to access Product: EQLibrary.Product("PRD45678", "Laptop","PRD45677654OTI", 2550.30F, "", "16 inch monitor")
-    present format to access Product: Product("PRD45678", "Laptop","PRD45677654OTI", 2550.30F, "", "16 inch monitor")
+    previous format: EQLibrary.Product("PRD45678", "Laptop","PRD45677654OTI", 2550.30F, "", "16 inch monitor")
+    present format: Product("PRD45678", "Laptop","PRD45677654OTI", 2550.30F, "", "16 inch monitor")
     ```
     1. Events class update
     ```
-    previous format to access Events: EQLibrary.Events.ITEM_ADD_TO_WISHLIST
-    present format to access Events:  EventName.ITEM_ADD_TO_WISHLIST
+    previous format: EQLibrary.Events.ITEM_ADD_TO_WISHLIST
+    present format:  EventName.ITEM_ADD_TO_WISHLIST
     ```
                 
 ## Version 1.1.5
