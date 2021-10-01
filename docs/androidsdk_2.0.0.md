@@ -97,8 +97,10 @@ Method call example
 
 ```Kotlin
 val eqObj = EQLibrary.getInstance(applicationContext)
+val job = Job()
+val scope = CoroutineScope(job + Dispatchers.IO)
 
-CoroutineScope(Dispatchers.IO).launch{
+scope.launch{
 	val res1 = eqObj.logUser("abc45678", null)
 	val res2 = eqObj.logUser("abc45678", param12, null)
 	val res3 = eqObj.logUser("abc45678", param12, LocationC(34.56788976,-24.6754336)
@@ -217,8 +219,10 @@ Example
 
 ```Kotlin
 val eqObj = EQLibrary.getInstance(applicationContext)
+val job = Job()
+val scope = CoroutineScope(job + Dispatchers.IO)
 
-CoroutineScope(Dispatchers.IO).launch {
+scope.launch {
 	val res1 = eqObj.logEvent( EventName.ITEM_ADD_TO_WISHLIST, 
 				   param5,
 		                   LocationC(56.789665, -34.89765544))
