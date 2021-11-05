@@ -561,12 +561,10 @@ Example
 val eqObj = EQLibrary.getInstance(applicationContext)
 val job = Job()
 val scope = CoroutineScope(job + Dispatchers.IO)
+val tag = BeaconTag( 101, 2329,"456","android_sdk_test_vendor", "test", "56789SRTY56543")
 
 scope.launch {
-    val result4 = eqObj.fireBeacon(
-        tag1,
-        LocationC(23.3456, -45.678)
-    ) 
+    val res4 = eqObj.fireBeacon( tag, LocationC(23.3456, -45.678))
 }
 
 ```
