@@ -1,3 +1,10 @@
+## Version 2.1.1
+ * feature - 
+    1. Three new calls added to this release. getBeacons, getBeacon, fireBeacon
+    2. Caching mechanism implement for beacon calls
+    3. Logging retry process update
+    4. delete cached beacon periodically 
+    
 ## Version 2.0.0
 Changes for this release are backward incompaitble
  * feature - 
