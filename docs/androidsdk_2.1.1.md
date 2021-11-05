@@ -507,7 +507,7 @@ scope.launch {
 
 </td>
 
-<td>This value determines for how many days, the beacon list will be saved into the cache. The default value is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. As long as the refresh value is set to false, SDK will read data from the cache or server depending on the data availability in the cache.
+<td>This value determines for how many days, the beacon will be saved into the cache. The default value is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. As long as the refresh value is set to false, SDK will read data from the cache or server depending on the data availability in the cache.
 
 </td>
 
