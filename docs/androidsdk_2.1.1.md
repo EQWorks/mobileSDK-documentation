@@ -417,7 +417,7 @@ scope.launch {
 
 </td>
 
-<td>This value determines for how many days, the beacon list will be saved into the cache. The default value is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. If the refresh value is set to false, SDK will read data from the cache or server depending on the data availability in the cache.
+<td>This parameter represents the number of days a beacon result will be saved in the cache. The default value is 1. the valid value range is 1 to 30. After 30 days, the cache gets cleared. As long as app developers send refresh param false, SDK will read data from cache/ server depending on data availability.
 
 </td>
 
@@ -429,7 +429,7 @@ scope.launch {
 
 </td>
 
-<td> When refresh is set to true, SDK will read beacons from the server. When set to false, SDK will read beacons from the cache. If no records are found in the cache, SDK will read from the server.
+<td> if refresh = true, SDK will read beacons from the server. For false value, SDK will read beacons from the cache. If data is not available in the cache, SDK will read data from the server.
 	
 </td>
 
@@ -507,7 +507,7 @@ scope.launch {
 
 </td>
 
-<td>This value determines for how many days, the beacon will be saved into the cache. The default value is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. As long as the refresh value is set to false, SDK will read data from the cache or server depending on the data availability in the cache.
+<td>This parameter represents the number of days a beacon result will be saved in the cache. The default value is 1. the valid value range is 1 to 30. After 30 days, the cache gets cleared. As long as app developers send refresh param false, SDK will read data from cache/ server depending on data availability.
 
 </td>
 
@@ -519,7 +519,7 @@ scope.launch {
 
 </td>
 
-<td> When refresh is set to true, SDK will read beacon from the server. When set to false, SDK will read beacon from the cache. If no record is found in the cache, then SDK will read from the server. 
+<td> if refresh = true, SDK will read beacons from the server. For false value, SDK will read beacons from the cache. If data is not available in the cache, SDK will read data from the server.
 </td>
 
 </tr>
@@ -538,7 +538,7 @@ scope.launch {
 
 </td>
 
-<td>The call returns a BeaconTag or null based on the provided id is valid or not. 
+<td>The call returns a BeaconTag or null based on the provided id. 
 
 </td>
 
