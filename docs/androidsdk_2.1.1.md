@@ -597,7 +597,7 @@ An SDK provided class. getBeacon/ getBeacons method returns BeaconTag object/ ob
 
 </td>
 
-<td> If location is enabled in the application, please provide this parameter using SDK provided class LocationC.
+<td> If location is enabled in the application, then send location data using LocationC class.
 
 </td>
 
