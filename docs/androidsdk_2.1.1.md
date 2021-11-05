@@ -449,7 +449,7 @@ scope.launch {
 
 </td>
 
-<td>The call returns List of BeaconTags or an empty list []. 
+<td>The call returns a List of BeaconTags or an empty list []. 
 
 </td>
 
