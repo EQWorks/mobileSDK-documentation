@@ -538,7 +538,7 @@ scope.launch {
 
 </td>
 
-<td> If a record is found for the provided id, A BeaconTag is returned otherwise null.
+<td> If a record is found for the provided id, a BeaconTag is returned otherwise null.
 
 </td>
 
