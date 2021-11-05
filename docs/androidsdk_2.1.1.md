@@ -417,7 +417,7 @@ scope.launch {
 
 </td>
 
-<td>This value determines for how many days the beacon list will be saved into the cache. default is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. As long as app developers set the refresh parameter to false when requesting for beacon list, reading from cache or downloading from the server is internally handled by SDK.
+<td>This value determines for how many days, the beacon list will be saved into the cache. The default value is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. If the refresh value is set to false, SDK will read data from the cache or server depending on the data availability in the cache.
 
 </td>
 
@@ -429,7 +429,8 @@ scope.launch {
 
 </td>
 
-<td> When refresh is set to true, SDK will read beacons from the server. When set to false, SDK will read beacons from the cache. If no records are found in the cache, then SDK will read from the server. 
+<td> When refresh is set to true, SDK will read beacons from the server. When set to false, SDK will read beacons from the cache. If no records are found in the cache, SDK will read from the server.
+	
 </td>
 
 </tr>
@@ -458,7 +459,7 @@ scope.launch {
 
 #### getBeacon
 
-Returns a beacon associated with provided id and client
+Returns a beacon associated with provided id.
 
 Method
 
@@ -506,7 +507,7 @@ scope.launch {
 
 </td>
 
-<td>This value determines for how many days the beacon will be saved into the cache. default is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. As long as app developers set the refresh parameter to false when requesting for a beacon, reading from cache or downloading from the server is internally handled by SDK.
+<td>This value determines for how many days, the beacon list will be saved into the cache. The default value is 1. app developers can send any number from 1 to 30. After 30 days, the cache is cleared. As long as the refresh value is set to false, SDK will read data from the cache or server depending on the data availability in the cache.
 
 </td>
 
