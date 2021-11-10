@@ -47,7 +47,7 @@ dependencyResolutionManagement {
 Application-level build.gradle file
 ```Kotlin
 dependencies {
-	implementation 'com.github.EQWorks:mobilesdk:1.0.7'
+	implementation 'com.github.EQWorks:mobilesdk:2.1.1'
 }
 ```
 ### Permission
