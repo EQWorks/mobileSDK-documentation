@@ -1,3 +1,11 @@
+## Version 2.1.6
+ * feature - 
+    1. Lint mechanism update
+    2. jwtToken read process for sample app update
+    3. Release procedure simplified
+ * fix - 
+    1. Location bug fix
+
 ## Version 2.1.1
  * feature - 
     1. Three new calls added to this release. getBeacons, getBeacon, fireBeacon
