@@ -156,12 +156,13 @@ eqObj.logEvent(name: "add_to_cart", location: LocationC(lat: 23.789658, long: -4
 ```
 ```Swift
 let obj = ProductDetails(expiryDate: "2022-12-12", weight: 1.13)
-let prop = ProductProperties(product: "electric candle lighter", price: 28.92, 
-desc: ["recharge and use", 
-	"charge lasts upto 600 sparks", 
-	"LED Battery Display", 
-	"USB charging cable"], 
-obj: obj)
+let prop = ProductProperties(product: "electric candle lighter", 
+			     price: 28.92, 
+			     desc: ["recharge and use", 
+				    "charge lasts upto 600 sparks", 
+				    "LED Battery Display", 
+				    "USB charging cable"], 
+			     obj: obj)
 
 let encoder = JSONEncoder()
 do {
@@ -174,11 +175,12 @@ do {
 ```
 ```Swift
 let obj = ProductDetails(expiryDate: "2022-12-12", weight: 1.13)
-let prop = ProductProperties(product: "electric candle lighter", price: 28.92, 
+let prop = ProductProperties(product: "electric candle lighter", 
+                             price: 28.92, 
 			     desc: ["recharge and use", 
-					"charge lasts upto 600 sparks", 
-					"LED Battery Display", 
-					"USB charging cable"], 
+				    "charge lasts upto 600 sparks", 
+				    "LED Battery Display", 
+				    "USB charging cable"], 
 			     obj: obj)
 
 let encoder = JSONEncoder()
