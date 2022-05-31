@@ -7,6 +7,7 @@
 	- [logEvent](#logevent)
   - [getBeacons](#getBeacons)
   - [getBeacon](#getBeacon)
+  - [getBeacons with campaignId](#getBeacons-with-campaignId)
   - [fireBeacon](#fireBeacon)
 * [TroubleShooting](#troubleshooting)
 * [Payload format](#payload-format)
@@ -25,7 +26,7 @@ TODO
 
 ### Configuration
 
-Mobile application need to configure the SDK to work seamlessly with EQ servers. There are two steps to follow.
+Client applications need to configure the SDK to work seamlessly with EQ servers. There are two steps to follow.
 
 1. EQWorks will provide a JWT access token to client application developers for authentication. Please Set this token in the SDK by calling ```setJwtToken(token: String)```. It is sufficient to set the token in SDK only once. Afterwards, if you need to update the token in SDK, you can use this method
 ```Swift
@@ -34,7 +35,7 @@ eqObj.setJwtToken(token: token)
 ```
 2. The MobileSDK supports data caching. Client applications can decide to upload a single data or batch data to the server. The SDK supports caching of 1 to 20 data in the SDK database. Using the ‘setQueueSize’ method, you can set any number between 1 to 20 as cache size. Default is 1.
 ```Swift
- let eqObj = EQLibrary.shared()
+let eqObj = EQLibrary.shared()
 _ = eqObj.setQueueSize(size: 5)
 ```
 
@@ -42,7 +43,7 @@ _ = eqObj.setQueueSize(size: 5)
 
 #### logUser
 
-This method helps to keep track of a user by assinging auto generated id to a user. It is sufficient to call this method once. You can also call this method to update attributes for a user. 
+logUser helps to identify a user by assigning an auto-generated id. It is sufficient to call this method once when the user first opens the app after download. You can also use this method to update attributes for a user.
 
 Method
 
@@ -78,7 +79,8 @@ let encoder = JSONEncoder()
 do {
     let attributeData = try encoder.encode(attributes)
     let attributeStr = String(data: attributeData, encoding: .utf8)
-    eqObj.logUser(appUserId: "STW45678899", attributes: attributeStr, location: LocationC(lat: 23.456755, long: -12.651229))
+    eqObj.logUser(appUserId: "STW45678899", attributes: attributeStr, 
+    location: LocationC(lat: 23.456755, long: -12.651229))
 } catch {
     print("invalid json provided")
 }
@@ -99,7 +101,7 @@ do {
 
 </td>
 
-<td>An id that client application uses to identify a user
+<td>userId that the client application uses to identify a user
 
 </td>
 
@@ -111,7 +113,7 @@ do {
 
 </td>
 
-<td>A valid json string which holds attributes of a user. App developers are encouraged to use "attributes" to record useful user information.
+<td>A valid json string. Use the ```attributes``` parameter to record any extra information.
 
 </td>
 
@@ -123,15 +125,7 @@ do {
 
 </td>
 
-<td>If location service is enabled in the client application, use LocationC class of SDK to provide user lat long.
-
-</td>
-
-</tr>
-
-<tr>
-
-<td colspan="2" >Output
+<td>If location service is enabled in the client application, use LocationC class of SDK to provide user lat-long.
 
 </td>
 
@@ -141,7 +135,7 @@ do {
 
 #### logEvent
 
-logEvent helps to track user's activities. Additionally, provides an optional “properties” parameter to log any details. App developers are encouraged to use “properties” to provide activity-related information available in the app.
+logEvent method helps to track a user's activity. Additionally, provides an optional ```properties``` parameter to log any details.
 
 Method
 
@@ -162,7 +156,8 @@ eqObj.logEvent(name: "add_to_cart", location: LocationC(lat: 23.789658, long: -4
 ```
 ```Swift
 let obj = ProductDetails(expiryDate: "2022-12-12", weight: 1.13)
-let prop = ProductProperties(product: "electric candle lighter", price: 28.92, desc: ["recharge and use", "charge lasts upto 600 sparks", "LED Battery Display", "USB charging cable"], obj: obj)
+let prop = ProductProperties(product: "electric candle lighter", price: 28.92, 
+desc: ["recharge and use", "charge lasts upto 600 sparks", "LED Battery Display", "USB charging cable"], obj: obj)
 let encoder = JSONEncoder()
 do {
     let propData = try encoder.encode(prop)
@@ -174,7 +169,8 @@ do {
 ```
 ```Swift
 let obj = ProductDetails(expiryDate: "2022-12-12", weight: 1.13)
-let prop = ProductProperties(product: "electric candle lighter", price: 28.92, desc: ["recharge and use", "charge lasts upto 600 sparks", "LED Battery Display", "USB charging cable"], obj: obj)
+let prop = ProductProperties(product: "electric candle lighter", price: 28.92, 
+desc: ["recharge and use", "charge lasts upto 600 sparks", "LED Battery Display", "USB charging cable"], obj: obj)
 let encoder = JSONEncoder()
 do {
     let propData = try encoder.encode(prop)
@@ -200,7 +196,7 @@ do {
 
 </td>
 
-<td>This is the event name. It can be any string.
+<td>A string to identify an event. Example: app_download, add_to_cart, delete_from_cart, card_linked. The client app should track the name used for an event and keep reusing them throughout the application to identify a specific event.
 
 </td>
 
@@ -212,7 +208,7 @@ do {
 
 </td>
 
-<td>A valid json string. 
+<td>A valid json string. Use this parameter to provide any extra information.
 
 </td>
 
@@ -224,7 +220,7 @@ do {
 
 </td>
 
-<td>If location service is enabled in the client application, use LocationC class from SDK to record user lat, long.
+<td>If location service is enabled in the client application, use LocationC class from SDK to log user lat-long.
 
 </td>
 
@@ -234,7 +230,7 @@ do {
 
 #### getBeacons
 
-Returns list of beacons associated with the client.
+Returns a list of beacons associated with the client.
 
 Method
 
@@ -257,14 +253,6 @@ eqObj.getBeacons {response, error in
 
 <tr>
 
-<td colspan="2" >Input
-
-</td>
-
-</tr>
-
-<tr>
-
 <td colspan="2" >Output
 
 </td>
@@ -277,7 +265,7 @@ eqObj.getBeacons {response, error in
 
 </td>
 
-<td>The call returns a List of BeaconTags or an empty list []. 
+<td>The call returns a List of beacons or an empty list []. 
 
 </td>
 
@@ -287,7 +275,7 @@ eqObj.getBeacons {response, error in
 
 #### getBeacon
 
-Returns a beacon associated with the provided id.
+Returns a beacon associated with the given id.
 
 Method
 
@@ -342,7 +330,7 @@ eqObj.getBeacon(beaconId: 8145) {response, error in
 
 </td>
 
-<td> If a record is found for the provided id, a BeaconTag is returned otherwise nil.
+<td> Returns the beacon if found with the given id, nil otherwise.
 
 </td>
 
@@ -352,7 +340,7 @@ eqObj.getBeacon(beaconId: 8145) {response, error in
 
 #### getBeacons with campaignId
 
-Returns list of beacons associated with provided campaign id.
+Returns a list of beacons associated with a campaign id.
 
 Method
 
@@ -387,7 +375,7 @@ eqObj.getBeacons(campId: 8527) {response, error in
 
 </td>
 
-<td>campaignId associated with beacon.
+<td>campaign Id associated with beacons.
 
 </td>
 
@@ -407,7 +395,7 @@ eqObj.getBeacons(campId: 8527) {response, error in
 
 </td>
 
-<td> returns list of beacons associated with The campaignId.
+<td> Returns a list of beacons for the given campaign id or [].
 
 </td>
 
@@ -418,7 +406,7 @@ eqObj.getBeacons(campId: 8527) {response, error in
 
 #### fireBeacon
 
-This call Uploads the beacon information to the server. firBeacon works with a single beaconTag. It is recommended that the Client application calls getBeacons with campaignId once and locally cache the list of beacons. Then the list can be used to call fireBeacons on specific events.
+This call Uploads the beacon information to the server. fireBeacon works with a single beaconTag. It is recommended that the Client application calls getBeacons with campaignId once and locally cache the list of beacons for a session. Then the cached list can be used to call fireBeacon on specific events.
 
 Method
 
@@ -428,7 +416,8 @@ public func fireBeacon(beacon: BeaconTag, location: LocationC?, completion: @esc
 Example
 
 ```Swift
-eqObj.fireBeacon(beacon: beaconTag, location: LocationC(lat: 23.67899, long: -34.4567), completion: handleFireBeaconResponse(success:error:))
+eqObj.fireBeacon(beacon: beaconTag, location: LocationC(lat: 23.67899, long: -34.4567), 
+completion: handleFireBeaconResponse(success:error:))
 
 func handleFireBeaconResponse(success: Bool?, error: Error?) {
   if let error = error {
@@ -457,7 +446,7 @@ func handleFireBeaconResponse(success: Bool?, error: Error?) {
 </td>
 
 <td>
-getBeacon/ getBeacons method returns BeaconTag object/ objects. Select a single BeaconTag to upload to the server with fireBeacon call at appropriate event.
+getBeacon/ getBeacons methods return a list of BeaconTag object/objects. Select a single beacon to upload to the server with the fireBeacon call.
 </td>
 
 </tr>
