@@ -113,7 +113,7 @@ do {
 
 </td>
 
-<td>A valid json string. Use the ```attributes``` parameter to record any extra information.
+<td>A valid json string. Use the "attributes" parameter to record any extra information.
 
 </td>
 
@@ -135,7 +135,7 @@ do {
 
 #### logEvent
 
-logEvent method helps to track a user's activity. Additionally, provides an optional ```properties``` parameter to log any details.
+logEvent method helps to track a user's activity. Additionally, provides an optional "properties" parameter to log any details.
 
 Method
 
@@ -157,7 +157,12 @@ eqObj.logEvent(name: "add_to_cart", location: LocationC(lat: 23.789658, long: -4
 ```Swift
 let obj = ProductDetails(expiryDate: "2022-12-12", weight: 1.13)
 let prop = ProductProperties(product: "electric candle lighter", price: 28.92, 
-desc: ["recharge and use", "charge lasts upto 600 sparks", "LED Battery Display", "USB charging cable"], obj: obj)
+desc: ["recharge and use", 
+	"charge lasts upto 600 sparks", 
+	"LED Battery Display", 
+	"USB charging cable"], 
+obj: obj)
+
 let encoder = JSONEncoder()
 do {
     let propData = try encoder.encode(prop)
@@ -170,7 +175,12 @@ do {
 ```Swift
 let obj = ProductDetails(expiryDate: "2022-12-12", weight: 1.13)
 let prop = ProductProperties(product: "electric candle lighter", price: 28.92, 
-desc: ["recharge and use", "charge lasts upto 600 sparks", "LED Battery Display", "USB charging cable"], obj: obj)
+			     desc: ["recharge and use", 
+					"charge lasts upto 600 sparks", 
+					"LED Battery Display", 
+					"USB charging cable"], 
+			     obj: obj)
+
 let encoder = JSONEncoder()
 do {
     let propData = try encoder.encode(prop)
