@@ -519,7 +519,7 @@ TODO
     },
     "timezone": "America/Winnipeg",
     "ip": "192.168.100.102",
-    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+    "userAgent": "mobilesdk_ios_test/1.0 sb’s iphone/iPhone iOS/15.5 Darwin/21.5.0 CFNetwork/1333.0.4"
   },
   "cmd": "logUser",
   "type": "Identify",
@@ -557,7 +557,7 @@ TODO
     },
     "timezone": "America/Winnipeg",
     "ip": "192.168.100.102",
-    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+    "userAgent": "mobilesdk_ios_test/1.0 sb’s iphone/iPhone iOS/15.5 Darwin/21.5.0 CFNetwork/1333.0.4"
   },
   "cmd": "logEvent",
   "type": "Track",
@@ -665,7 +665,7 @@ TODO
     },
     "timezone": "America/Winnipeg",
     "ip": "192.168.100.102",
-    "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+    "userAgent": "mobilesdk_ios_test/1.0 sb’s iphone/iPhone iOS/15.5 Darwin/21.5.0 CFNetwork/1333.0.4"
   }
 }
 ```
