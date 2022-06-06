@@ -510,7 +510,7 @@ TODO
     "device": {
       "manufacturer": "Apple",
       "model": "iPhone",
-      "name": "iPhone 12",
+      "name": "sb’s iphone",
       "type": "iOS"
     },
     "os": {
@@ -548,7 +548,7 @@ TODO
     "device": {
       "manufacturer": "Apple",
       "model": "iPhone",
-      "name": "iPhone 12",
+      "name": "sb’s iphone",
       "type": "iOS"
     },
     "os": {
@@ -656,7 +656,7 @@ TODO
     "device": {
       "manufacturer": "Apple",
       "model": "iPhone",
-      "name": "iPhone 12",
+      "name": "sb’s iphone",
       "type": "iOS"
     },
     "os": {
