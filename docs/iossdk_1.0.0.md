@@ -23,7 +23,7 @@ EQWorks iOS MobileSDK allows app developers to log events from client applicatio
 
 <img width="269" alt="Package_dependencies" src="https://user-images.githubusercontent.com/21972114/172257159-79d13dc0-7404-45d6-b8c6-51569d8a75d7.png">
 
-3. ```import mobilesdkios``` in corresponding files to use the library.
+3. ```import mobilesdkios``` into files to use the SDK.
 
 ### Configuration
 
