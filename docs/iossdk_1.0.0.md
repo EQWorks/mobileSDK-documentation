@@ -18,11 +18,11 @@ EQWorks iOS MobileSDK allows app developers to log events from client applicatio
 
 ### Installation
 
-TODO
+1. In Xcode, open your iOS application project. Go to the menu File -> Add Packages ->   enter url "https://github.com/EQWorks/mobilesdkios-swift-package".
+2. Step 1 will add the package dependencies to your project.
+img src="../docs/images/Package_dependencies.png" width=470 height=350
 
-### Permission
-
-TODO
+3. ```import mobilesdkios``` in corresponding files to use the library.
 
 ### Configuration
 
@@ -38,6 +38,11 @@ eqObj.setJwtToken(token: token)
 let eqObj = EQLibrary.shared()
 _ = eqObj.setQueueSize(size: 5)
 ```
+3. This SDK provides optional logging. To enable log
+``` Swift 
+EQLibrary.debugLogEnabled = true
+```
+Please disable log before releasing the app to the App Store.
 
 ### Client Methods
 
