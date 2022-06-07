@@ -42,7 +42,7 @@ _ = eqObj.setQueueSize(size: 5)
 ``` Swift 
 EQLibrary.debugLogEnabled = true
 ```
-Please disable log before releasing the app to the App Store.
+***Please disable log before releasing the app to the App Store.***
 
 ### Client Methods
 
