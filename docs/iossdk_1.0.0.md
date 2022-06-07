@@ -145,8 +145,8 @@ do {
 
 <tr>
 
-<td colspan="2" > Returns void. Enable ``` EQLibrary.debugLogEnabled = true``` to debug. 
-***Disable ``` EQLibrary.debugLogEnabled = false``` before App store release.***
+<td colspan="2" > Returns void. Enable <code>EQLibrary.debugLogEnabled = true</code> to debug. 
+<strong>Disable <code>EQLibrary.debugLogEnabled = false</code> before App store release.</strong>
 
 </td>
 
@@ -256,8 +256,8 @@ do {
 
 <tr>
 
-<td colspan="2" > Returns void. Enable ``` EQLibrary.debugLogEnabled = true``` to debug. 
-***Disable ``` EQLibrary.debugLogEnabled = false``` before App store release.***
+<td colspan="2" > Returns void. Enable <code>EQLibrary.debugLogEnabled = true</code> to debug. 
+<strong>Disable <code>EQLibrary.debugLogEnabled = false</code> before App store release.</strong>
 
 </td>
 
