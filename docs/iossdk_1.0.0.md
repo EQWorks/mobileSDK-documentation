@@ -490,6 +490,14 @@ getBeacon/ getBeacons methods return a list of BeaconTag object/objects. Select 
 
 <tr>
 
+<td colspan="2" >Output
+
+</td>
+
+</tr>
+
+<tr>
+
 <td colspan="2" > Works with completion handler. You can check success/error as shown in the above code snippet.
 
 </td>
@@ -500,7 +508,7 @@ getBeacon/ getBeacons methods return a list of BeaconTag object/objects. Select 
 
 ### TroubleShooting
 
-1. Contact EQWorks to get a valid jwtToekn if receiving an authentication error.
+1. Contact EQWorks to get a valid jwtToekn if you are receiving an authentication error.
 
 ### Payload Format
 
