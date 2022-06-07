@@ -1,6 +1,5 @@
 * [EQWorks iOS MobileSDK](#eqworks-ios-mobilesdk)
 * [Installation](#installation)
-* [Permission](#permission)
 * [Configuration](#configuration)
 * [Client Methods](#client-methods)
 	- [logUser](#loguser)
