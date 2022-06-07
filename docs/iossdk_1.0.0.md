@@ -135,6 +135,22 @@ do {
 </td>
 
 </tr>
+<tr>
+
+<td colspan="2" >Output
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2" > Returns void. Enable ``` EQLibrary.debugLogEnabled = true``` to debug. 
+***Disable ``` EQLibrary.debugLogEnabled = false``` before App store release.***
+
+</td>
+
+</tr>
 
 </table>
 
@@ -230,6 +246,22 @@ do {
 </td>
 
 </tr>
+<tr>
+
+<td colspan="2" >Output
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2" > Returns void. Enable ``` EQLibrary.debugLogEnabled = true``` to debug. 
+***Disable ``` EQLibrary.debugLogEnabled = false``` before App store release.***
+
+</td>
+
+</tr>
 
 </table>
 
@@ -266,11 +298,7 @@ eqObj.getBeacons {response, error in
 
 <tr>
 
-<td>
-
-</td>
-
-<td>The call returns a List of beacons or an empty list []. 
+<td colspan="2">Returns a list of beacons or an empty list []. 
 
 </td>
 
@@ -331,11 +359,7 @@ eqObj.getBeacon(beaconId: 8145) {response, error in
 
 <tr>
 
-<td>
-
-</td>
-
-<td> Returns the beacon if found with the given id, nil otherwise.
+<td  colspan="2"> Returns the beacon if found with the given id, nil otherwise.
 
 </td>
 
@@ -396,11 +420,7 @@ eqObj.getBeacons(campId: 8527) {response, error in
 
 <tr>
 
-<td>
-
-</td>
-
-<td> Returns a list of beacons for the given campaign id or [].
+<td colspan="2"> Returns a list of beacons for the given campaign id or [].
 
 </td>
 
@@ -462,7 +482,15 @@ getBeacon/ getBeacons methods return a list of BeaconTag object/objects. Select 
 
 </td>
 
-<td> If location is enabled in the application, then send location data using LocationC class.
+<td> If location is enabled in the application, then send location data using LocationC.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2" > Works with completion handler. You can check success/error as shown in the above code snippet.
 
 </td>
 
@@ -472,7 +500,7 @@ getBeacon/ getBeacons methods return a list of BeaconTag object/objects. Select 
 
 ### TroubleShooting
 
-TODO
+1. Contact EQWorks to get a valid jwtToekn if receiving an authentication error.
 
 ### Payload Format
 
